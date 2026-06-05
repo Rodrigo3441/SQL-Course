@@ -1,7 +1,7 @@
 
 - ## SQL CLASSES - From Zero into Advanced
-- ## Started date: November, 23rd of 2025
-- ## Channel: Data with Baraa
+- ### Started date: November, 23rd of 2025
+- ### Channel: Data with Baraa
 
 ### Summary
 
