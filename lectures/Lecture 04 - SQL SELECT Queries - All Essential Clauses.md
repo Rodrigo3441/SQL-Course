@@ -9,7 +9,7 @@ Commands
 
 SQL Query can be understood as a command line that focus in answer question about your data stored inside a database.
 
-![](image%2001%20-%20flowchart.png)
+![erro](../images/Lecture%2004/image%2001%20-%20flowchart.png)
 
 ## SQL Clauses
 
@@ -59,7 +59,8 @@ Total score by country
 **From table**
 **GROUP BY country**
 
-| ![](image%2002%20-%20group%20by.png) | ![255](image%2003%20-%20group%20by%20result.png) |
+| <img src="../images/Lecture 04/image 02 - group by.png" style="width: 200px; height: auto;">
+ | <img src="../images/Lecture 04/image 03 - group by result.png" style="width: 200px; height: auto;"> |
 | ------------------------------------ | ------------------------------------------------ |
 You can combine all of them
 **SUM() AS name:** Alias (shorthand name assigned to a column or table in a query)
@@ -92,7 +93,7 @@ Query that finds the average score for each country, considering only customers 
 Removes duplicates (repeated values)
 Each value appears only once
 
-| ![262](image%2004%20-%20distinct.png) | ![205](image%2005%20-%20distinct%20result.png) |
+| ![262](../images/Lecture%2004/image%2004%20-%20distinct.png) | ![205](../images/Lecture%2004/image%2005%20-%20distinct%20result.png) |
 | ------------------------------------- | ---------------------------------------------- |
 
 ## TOP / LIMIT
@@ -114,21 +115,21 @@ Restrict the number of rows returned in the results
 **HAVING SUM(COL2)>30**
 **ORDER BY COL1 ASC**
 
-1-      Filter Columns
-2-      Filter Duplicates
-3-      Filter Result Rows
-4-      Filter Rows Before Aggregation
-5-      Filter rows after aggregation
+1-      Filter Columns<br>
+2-      Filter Duplicates<br>
+3-      Filter Result Rows<br>
+4-      Filter Rows Before Aggregation<br>
+5-      Filter rows after aggregation<br>
 
 ### Execute Order
 
-1-      FROM
-2-      WHERE
-3-      GROUP BY
-4-      HAVING
-5-      SELECT DISTINCT
-6-      ORDER BY
-7-      TOP
+1-      FROM<br>
+2-      WHERE<br>
+3-      GROUP BY<br>
+4-      HAVING<br>
+5-      SELECT DISTINCT<br>
+6-      ORDER BY<br>
+7-      TOP<br>
 
 ## My Comments
 
