@@ -59,9 +59,9 @@ Total score by country
 **From table**
 **GROUP BY country**
 
-| <img src="../images/Lecture 04/image 02 - group by.png" style="width: 200px; height: auto;">
- | <img src="../images/Lecture 04/image 03 - group by result.png" style="width: 200px; height: auto;"> |
-| ------------------------------------ | ------------------------------------------------ |
+| <img src="../images/Lecture 04/image 02 - group by.png" style="width: 200px; height: auto;"> | <img src="../images/Lecture 04/image 03 - group by result.png" style="width: 200px; height: auto;"> |
+| ------------------------------------ |------------------------------------------------ |
+
 You can combine all of them
 **SUM() AS name:** Alias (shorthand name assigned to a column or table in a query)
 
