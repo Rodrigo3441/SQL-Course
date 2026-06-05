@@ -37,7 +37,7 @@ Always list columns explicitly for clarity and maintainability
 
 ### Insert Using SELECT Syntax
 
-![465](image%2001%20-%20INSERT.png)
+![465](../images/Lecture%2006/image%2001%20-%20INSERT.png)
 
 First, you retrieve the data from the source table, and then, the results are inserted into the destination table
 

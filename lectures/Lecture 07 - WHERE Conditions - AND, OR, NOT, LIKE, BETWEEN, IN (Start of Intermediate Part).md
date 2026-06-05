@@ -41,14 +41,14 @@ Subquery = value
 
 Checks if a value is within a range
 
-![697](image%2001%20-%20Range%20operator.png)
+![697](../images/Lecture%2007/image%2001%20-%20Range%20operator.png)
 
 ## Membership Operators
 
 **IN:** Checks if a value exists in a list
 **NOT IN:** Checks if a value NOT exists in a list
 
-![489](image%2002%20-%20Membership%20operator.png)
+![489](../images/Lecture%2007/image%2002%20-%20Membership%20operator.png)
 
 Use In instead of OR for multiple values in the same column to simplify SQL
 

@@ -14,15 +14,15 @@ You use them to combine two or more tables to combine the result by matching a k
 | Check for Existence ‘filtering’  | Check if data from one table is in another table                                          | **INNER, LEFT + WHERE, FULL, LEFT ANTI JOIN, FULL ANTI JOIN** |
 ## JOIN Types
 
-![697](image%2001%20-%20data%20types.png)
+![697](../images/Lecture%2008/image%2001%20-%20data%20types.png)
 
-![591](image%2002%20-%20joins.png)
+![591](../images/Lecture%2008/image%2002%20-%20joins.png)
 
 ## Basics
 
 ### Two Results (NO JOIN)
 
-![254](image%2003%20-%20no%20join.png)
+![254](../images/Lecture%2008/image%2003%20-%20no%20join.png)
 
 Returns data from tables without combining them
 
@@ -32,7 +32,7 @@ You want to see all rows from A and B
 
 ### INNER JOIN
 
-![260](image%2004%20-%20inner%20join.png)
+![260](../images/Lecture%2008/image%2004%20-%20inner%20join.png)
 
 Return the matching rows from both tables
 
@@ -44,7 +44,7 @@ On INNER AND FULL JOIN, tables order doesn’t matter
 
 #### DEFAULT: INNER
 
-![](image%2005%20-%20default%20inner.png)
+![](../images/Lecture%2008/image%2005%20-%20default%20inner.png)
 
 **Best Practices**
 
@@ -60,7 +60,7 @@ For clarity, you may specify which value comes from which table
 
 ## LEFT JOIN
 
-![265](image%2006%20-%20left%20join.png)
+![265](../images/Lecture%2008/image%2006%20-%20left%20join.png)
 
 Returns all rows from LEFT and only matching from RIGHT
 A is the primary source of data and B is the secondary (additional data)
@@ -74,7 +74,7 @@ SQL places all data of LEFT table, and just after it, checks the matching in the
 
 ## RIGHT JOIN
 
-![262](image%2007%20-%20right%20join.png)
+![262](../images/Lecture%2008/image%2007%20-%20right%20join.png)
 
 Returns all rows from RIGHT and only matching from LEFT
 B is the primary source of data and A is the secondary (additional data)
@@ -85,7 +85,7 @@ On RIGHT JOIN, the order matter, you must specify the correct order of the table
 
 ## FULL JOIN
 
-![259](image%2008%20-%20full%20join.png)
+![259](../images/Lecture%2008/image%2008%20-%20full%20join.png)
 
 Returns all rows from both tables
 
