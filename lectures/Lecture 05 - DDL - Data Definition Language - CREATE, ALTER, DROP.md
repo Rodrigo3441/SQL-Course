@@ -10,8 +10,8 @@ Define the structure of your data
 **CREATE DATABASE**
 **CREATE TABLE**
 
-![357](../images/Lecture%2005/image%2001%20-%20CREATE.png)
-![](../images/Lecture%2005/image%2002%20-%20ALTER.png)
+![357](../images/Lecture%2005/image%2001%20-%20CREATE.png)<br>
+![](../images/Lecture%2005/image%2002%20-%20ALTER.png)<br>
 
 You can use **CONSTRAINT alias PRIMARY KEY (column)** to define the **PRIMARY KEY** of a table
 
