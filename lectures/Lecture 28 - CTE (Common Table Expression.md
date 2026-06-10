@@ -4,7 +4,11 @@
 
 ## What is CTE
 
-Temporary, named result set (virtual table), that can be used multiple times within your query to simplify and organize complex query
+Temporary, named result set (virtual table), that can be used multiple times within your query to simplify and organize complex query 
+
+## CTE vs Subquery
+
+![](../images/Lecture%2028/image%2001%20-%20cte%20vs%20subquery.png)
 
 ## CTE Types
 
@@ -17,11 +21,10 @@ Defined and used independently. Runs independently as it’s self-contained and 
 
 ## CTE Syntax
 
-**WITH CTE-Name AS**
-**(**
-	**SELECT**
-	**FROM  
-	WHERE**
+**WITH CTE-Name AS**<br>
+**(**<br>
+	**SELECT**<br>
+	WHERE**<br>
 **)**
 
 **SELECT**
@@ -32,34 +35,34 @@ Defined and used independently. Runs independently as it’s self-contained and 
 
 Use a comma in order to create more than one CTE 
 
-**WITH CTE-Name1 AS**
-**(**
-	**SELET**
-	**FROM  
-	WHERE**
-**)**
-, **WITH CTE-Name2 AS**
-**(**
-	**SELECT**
-	**FROM  
-	WHERE**
+**WITH CTE-Name1 AS**<br>
+**(**<br>
+	**SELET**<br>
+	**FROM  <br>
+	WHERE**<br>
+**)**<br>
+, **WITH CTE-Name2 AS**<br>
+**(**<br>
+	**SELECT**<br>
+	**FROM  <br>
+	WHERE**<br>
 **)**
 
 ## Nested CTE - Syntax
 
 CTE inside another CTE, a nested CTE uses the result of another CTE, so it can’t run independently
 
-**WITH CTE-Name1 AS**
-**(**
-	**SELECT**
-	**FROM  
-	WHERE**
-**)**
-, **WITH CTE-Name2 AS**
-**(**
-	**SELECT**
-	**FROM CTE-Name1  
-	WHERE**
+**WITH CTE-Name1 AS**<br>
+**(**<br>
+	**SELECT**<br>
+	**FROM  <br>
+	WHERE**<br>
+**)**<br>
+, **WITH CTE-Name2 AS**<br>
+**(**<br>
+	**SELECT**<br>
+	**FROM CTE-Name1  <br>
+	WHERE**<br>
 **)**
 
 ## CTE Best Practices
@@ -73,13 +76,13 @@ Self-referencing query that repeatedly processes  data until a specific conditi
 
 ### Syntax
 
-**WITH CTE-Name AS**
-**(**
-**SELECT -> Anchor query**
-**FROM  
-WHERE
+**WITH CTE-Name AS**<br>
+**(**<br>
+**SELECT -> Anchor query**<br>
+**FROM**  <br>
+**WHERE**<br>
 
-**UNION ALL / UNION
+**UNION ALL / UNION**
 
 **SELECT -> Recursive query**
 **FROM CTE-Name**
