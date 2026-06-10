@@ -7,10 +7,10 @@ Evaluates a list of conditions and returns a value when the first condition is m
 
 ## Syntax
 
-**CASE**
-	**WHEN condition1 THEN result1**
-	**WHEN condition2 THEN result2**
-	**WHEN condition3 THEN result3**
+**CASE**<br>
+	**WHEN condition1 THEN result1**<br>
+	**WHEN condition2 THEN result2**<br>
+	**WHEN condition3 THEN result3**<br>
 	**ELSE result**
 **END**
 
@@ -18,8 +18,8 @@ Evaluates a list of conditions and returns a value when the first condition is m
 
 ### Example 01
 
-**CASE**
-	**WHEN sales > 50 THEN ‘High’**
+**CASE**<br>
+	**WHEN sales > 50 THEN ‘High’**<br>
 **END**
 
 | sales | CASE |
@@ -31,9 +31,9 @@ Evaluates a list of conditions and returns a value when the first condition is m
 
 ### Example 02
 
-**CASE**
-	**WHEN sales > 50 THEN ‘High’**
-	**WHEN sales  > 20 THEN ‘Medium’**
+**CASE**<br>
+	**WHEN sales > 50 THEN ‘High’**<br>
+	**WHEN sales  > 20 THEN ‘Medium’**<br>
 **END**
 
 | **sales** | **CASE** |
@@ -45,9 +45,9 @@ Evaluates a list of conditions and returns a value when the first condition is m
 
 ### Example 03
 
-**CASE**
-	**WHEN sales > 50 THEN ‘High’**
-	**WHEN sales  > 20 THEN ‘Medium’**
+**CASE**<br>
+	**WHEN sales > 50 THEN ‘High’**<br>
+	**WHEN sales  > 20 THEN ‘Medium’**<br>
 	**ELSE ‘Low’**
 **END**
 
@@ -99,22 +99,22 @@ Apply aggregate functions only on subsets of data that fulfill certain condtions
 
 When you have to compare one single variable/column to many values, you can use the short form of CASE instead of typing the same thing thousand times:
 
-**CASE**
-	**WHEN country = ‘Germany’ THEN ‘DE’**
-	**WHEN country = ‘India’ THEN ‘IN’**
-	**WHEN country = ‘United States THEN ‘US’**
-	**WHEN country = ‘France’ THEN ‘FR’**
-	**WHEN country = ‘Italy’ THEN ‘IT’**
+**CASE**<br>
+	**WHEN country = ‘Germany’ THEN ‘DE’**<br>
+	**WHEN country = ‘India’ THEN ‘IN’**<br>
+	**WHEN country = ‘United States THEN ‘US’**<br>
+	**WHEN country = ‘France’ THEN ‘FR’**<br>
+	**WHEN country = ‘Italy’ THEN ‘IT’**<br>
 	**ELSE ‘n/a’**
 **END**
 
 In short form, you can specify the value you want to compare after CASE statement word, and just specify the value you will evaluate to the default value:
 
-**CASE country**
-	**WHEN ‘Germany’ THEN ‘DE’**
-	**WHEN ‘India’ THEN ‘IN’**
-	**WHEN ‘United States THEN ‘US’**
-	**WHEN ‘France’ THEN ‘FR’**
-	**WHEN ‘Italy’ THEN ‘IT’**
-	**ELSE ‘n/a’**
+**CASE country**<br>
+	**WHEN ‘Germany’ THEN ‘DE’**<br>
+	**WHEN ‘India’ THEN ‘IN’**<br>
+	**WHEN ‘United States THEN ‘US’**<br>
+	**WHEN ‘France’ THEN ‘FR’**<br>
+	**WHEN ‘Italy’ THEN ‘IT’**<br>
+	**ELSE ‘n/a’**<br>
 **END**
