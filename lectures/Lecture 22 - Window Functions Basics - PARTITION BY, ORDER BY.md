@@ -15,8 +15,8 @@ Let’s say you would like to see the total sales for each product:
 | 1      | Cap         | 10        |
 | 2      | Cap         | 30        |
 | 3      | Gloves      | 5         |
-| 4      | Gloves      | 20        |
-<br>
+| 4      | Gloves      | 20        | <br>
+
                
 | **PRODUCT** | **TOTAL_SALES** |
 | ----------- | --------------- |
