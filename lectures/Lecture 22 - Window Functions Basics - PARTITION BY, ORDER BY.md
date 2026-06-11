@@ -16,11 +16,14 @@ Let’s say you would like to see the total sales for each product:
 | 2      | Cap         | 30        |
 | 3      | Gloves      | 5         |
 | 4      | Gloves      | 20        |
+<br>
                 
 | PRODUCT | TOTAL_SALES |
 | ------- | ----------- |
 | Caps    | 40          |
 | Gloves  | 25          |
+<br>
+
 The final number of rows will be depending on the number of products we have stored on the database, and the final result will not show the id and additional information about the products, it will only show the name of each product and the total_sales. Small level of details.
 
 ### Same task but using Window Function
@@ -33,6 +36,7 @@ Total sales for each product. If you use window function SQL will execute each r
 | 2      | Cap         | 30        |
 | 3      | Gloves      | 5         |
 | 4      | Gloves      | 20        |
+<br>
 
 | **ID** | **PRODUCT** | **Total_Sales** |
 | ------ | ----------- | --------------- |
@@ -40,6 +44,7 @@ Total sales for each product. If you use window function SQL will execute each r
 | 2      | Cap         | 40              |
 | 3      | Gloves      | 25              |
 | 4      | Gloves      | 25              |
+<br>
 
 When you use window function, you are doing row-level calculations. For the previous example: in input data you have four rows, and in the output, you’re going to get four rows as well.
 
