@@ -1,7 +1,7 @@
 
 - ## SQL CLASSES - From Zero into Advanced
-- ### Started date: November, 23rd of 2025
-- ### Channel: Data with Baraa
+- ## Started date: November, 23rd of 2025
+- ## Channel: Data with Baraa
 
 ### Summary
 
@@ -9,7 +9,7 @@
 | ------------------ | ------------------- | -------------------------------------------------------------------- |
 | Lecture 01         | November 23rd       | How i would learn SQL (Study Plan)                                   |
 | Lecture 02         | NULL                | What is SQL (Visually Explained)                                     |
-| Lecture 03         | November 4th        | How to setup and install SQL Server                                  |
+| Lecture 03         | November 24th       | How to setup and install SQL Server                                  |
 | Lecture 04         | NULL                | SQL SELECT Queries - All Essential Clauses                           |
 | Lecture 05         | November 28th       | DDL - Data Definition Language - CREATE, ALTER, DROP                 |
 | Lecture 06         | November 28th       | DML - Data Manipulation Data - INSERT, UPDATE, DELETE                |
@@ -34,11 +34,11 @@
 | Lecture 25         | April 3rd           | Value Window Functions - LEAD, LAG, FIRST_VALUE, LAST_VALUE          |
 | Lecture 26         | April 4th           | Five SQL Techniques You Need in Every Project                        |
 | Lecture 27         | April 13th          | Subqueries - Complete Guide                                          |
-| Lecture 28         |                     | CTE (Common Table Expression)                                        |
-| Lecture 29         |                     | Views - Six Top use Cases                                            |
-| Lecture 30         |                     | CTAS - How to Create SQL Tables From a Query                         |
-| Lecture 31         |                     | Temp Tables                                                          |
-| Lecture 32         |                     |                                                                      |
+| Lecture 28         | June 8th            | CTE (Common Table Expression)                                        |
+| Lecture 29         | June 10th           | Views - Six Top use Cases                                            |
+| Lecture 30         | June 11th           | CTAS - How to Create SQL Tables From a Query                         |
+| Lecture 31         | June 11th           | Temp Tables                                                          |
+| Lecture 32         | June 11th           | Subquery vs CTE vs Views vs CTAS vs Temp Tables                      |
 | Lecture 33         |                     | Indexes - Clustered vs Nonclustered                                  |
 | Lecture 34         |                     |                                                                      |
 | Lecture 35         |                     | Unique and Filtered Indexes                                          |
