@@ -18,10 +18,11 @@ Let’s say you would like to see the total sales for each product:
 | 4      | Gloves      | 20        |
 <br>
                 
-| PRODUCT | TOTAL_SALES |
-| ------- | ----------- |
-| Caps    | 40          |
-| Gloves  | 25          |
+| **PRODUCT** | **TOTAL_SALES** |
+| ----------- | --------------- |
+| Caps        | 40              |
+| Gloves      | 25              |
+
 <br>
 
 The final number of rows will be depending on the number of products we have stored on the database, and the final result will not show the id and additional information about the products, it will only show the name of each product and the total_sales. Small level of details.
