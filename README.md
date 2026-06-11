@@ -11,14 +11,17 @@ This repository contains lecture summaries, examples, screenshots, and concepts 
 ```text
 SQL-Course/
 ├── docs/
-├── lectures/
+├── exercises/
 ├── images/
+├── lectures/
 └── README.md
 ```
 
-- `docs/` → Original document with my notes
-- `lectures/` → Markdown notes for each lecture.
+- `docs/` → Original document with my notes.
+- `exercises/` → Challenges and tasks i solved.
 - `images/` → Images and screenshots used in the notes.
+- `lectures/` → Markdown notes for each lecture.
+
 
 ## Course Topics
 
