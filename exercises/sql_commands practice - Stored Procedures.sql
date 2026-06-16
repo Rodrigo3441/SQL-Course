@@ -1,72 +1,75 @@
-USE salesdb;
+-- Step 1: Write a query
+-- For US customers find the total number of customers and the average score
 
--- step 1: Write a query
--- for US customers find the total number of customers and the average score
+/* 
 SELECT
 	COUNT(*) AS total_customers,
 	AVG(score) AS avg_score
-FROM customers
-WHERE country = 'USA';
+FROM sales.Customers
+WHERE country = 'USA'
+*/
 
--- step 2: turning the query into a stored procedure
-DELIMITER //
-CREATE PROCEDURE weekly_avg()
+-- Step 2: Turning the query into a stored procedure
+
+ALTER PROCEDURE get_customer_summary @Country NVARCHAR(50) = 'USA' AS
 BEGIN
-	SELECT
-		COUNT(*) AS total_customers,
-		AVG(score) AS avg_score
-	FROM customers
-	WHERE country = 'USA';
-END //
-DELIMITER ;
+	BEGIN TRY
 
--- execute
-CALL weekly_avg();
+		DECLARE @total_customers INT, @avg_score FLOAT 
 
--- creating a stored procedure with parameters
-DROP PROCEDURE IF EXISTS weekly_avg;
+		-- ============================================
+		-- Step 1: Prepare and Cleanup Data
+		-- ============================================
+		IF EXISTS (SELECT 1 FROM sales.Customers WHERE score IS NULL AND country = @Country)
+		BEGIN
+			PRINT('Updating NULL Scores to 0');
+			UPDATE sales.customers
+			SET score = 0
+			WHERE score IS NULL and country = @country;
+		END
 
--- procedure declaration
-DELIMITER //
-CREATE PROCEDURE weekly_avg(
-	IN target_country VARCHAR(50)
-)
+		ELSE
+		BEGIN
+			PRINT('No NULL Scores found');
+		END;
 
-BEGIN
-	-- prepare and cleanup data
-IF EXISTS (SELECT 1 FROM customers WHERE score IS NULL AND country = target_country)
-THEN
-	UPDATE customers
-	SET score = 0
-	WHERE score IS NULL AND country = target_country;
-END IF;
+		-- ============================================
+		-- Step 2: Generating Summary Reports
+		-- ============================================
+		-- Calculates total customers and average for a specific country
+		SELECT
+			@total_customers = COUNT(*),
+			@avg_score = AVG(score)
+		FROM sales.Customers
+		WHERE country = @Country;
 
-	-- generating reports
-	SELECT
-		COUNT(*) AS total_customers,
-		AVG(score) AS avg_score
-	FROM customers
-	WHERE country = target_country;
-    
-    -- find the total number of orders and total sales
-    SELECT
-		COUNT(*) total_orders,
-		SUM(sales) total_sales
-	FROM orders AS o
-	INNER JOIN customers AS c
-	ON c.customerid = o.customerid
-	WHERE c.country = target_country;
-    
-END //
-DELIMITER ;
+		PRINT 'Total Customers from ' + @Country + ': ' +  CAST(@total_customers AS NVARCHAR);
+		PRINT 'Average Score from ' + @Country + ': ' + CAST(@avg_score AS NVARCHAR);
 
-CALL weekly_avg('USA');
+		-- ============================================
+		-- Calculate total number of orders and total sales for specific country
+		-- ============================================
+		SELECT
+			COUNT(OrderID) AS total_orders,
+			SUM(sales) AS total_sales
+		FROM sales.orders AS o
+		JOIN sales.customers AS c
+		ON c.customerid = o.CustomerID
+		WHERE c.country = @Country;
+	END TRY
 
--- defining the database to the default in order to execute procedures
-ALTER TABLE customers
-MODIFY country VARCHAR(50)
-COLLATE utf8mb4_0900_ai_ci;
+	-- ============================================
+	-- Error Handling
+	-- ============================================
+	BEGIN CATCH
+		PRINT('An error occurred');
+		PRINT('Error Message: ' + ERROR_MESSAGE());
+		PRINT('Error Number: ' + CAST(ERROR_NUMBER() AS NVARCHAR));
+		PRINT('Error Line: ' + CAST(ERROR_LINE() AS NVARCHAR));
+		PRINT('Error Procedure: ' + ERROR_PROCEDURE());
+	END CATCH
+END
 
-SET SQL_SAFE_UPDATES = 0;
-
-
+-- execute the stored procedure
+EXEC get_customer_summary @Country = 'Germany'
+EXEC get_customer_summary
